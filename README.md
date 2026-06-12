@@ -1,4 +1,4 @@
-# scrape-sources
+# clipkit
 
 Compact AI-agent tooling for source gathering and media workflows.
 
