@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube-cli-pydoll"
+version = "0.1.0"
+description = "Pydoll-backed YouTube browsing CLI with screenshots, frame sampling, downloads, and transcripts."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydoll-python>=2.0.0",
+    "yt-dlp>=2025.1.0",
+    "youtube-transcript-api>=0.6.0",
+]
+
+[project.scripts]
+youtube-cli = "youtube_cli.cli:main"
+gemini-cli = "gemini_cli.cli:main"
+image-search-cli = "image_search_cli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["youtube_cli*", "gemini_cli*", "image_search_cli*"]
